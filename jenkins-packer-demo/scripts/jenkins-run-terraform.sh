@@ -7,4 +7,4 @@ S3_BUCKET=`aws s3 ls --region $AWS_REGION |grep terraform-state |sort|tail -n1 |
 sed -i 's/terraform-state-xx70dpnh/'${S3_BUCKET}'/' backend.tf
 sed -i 's/#//g' backend.tf
 terraform init
-terraform destroy
+terraform destroy -auto-approve
