@@ -1,4 +1,6 @@
 #!/bin/bash
 set -ex
+
 AWS_REGION="eu-west-1"
+cd jenkins-packer-demo
 terraform destroy
